@@ -1,0 +1,37 @@
+package objRepo;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ContactPage 
+{
+	WebDriver driver;
+	public ContactPage(WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//img[@title='Create Contact...']")
+	WebElement createcontactbtn;
+
+	@FindBy(xpath="//input[@name='search_text']")
+	WebElement searchfortxt;
+	
+	@FindBy(xpath="//select[@fdprocessedid='458dy']")
+	WebElement searchintxt;
+	
+	public WebElement getCreatecontactbtn() {
+		return createcontactbtn;
+	}
+
+	public WebElement getSearchfortxt() {
+		return searchfortxt;
+	}
+
+	public WebElement getSearchintxt() {
+		return searchintxt;
+	}
+
+}
