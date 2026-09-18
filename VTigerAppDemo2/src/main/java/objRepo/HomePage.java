@@ -30,14 +30,16 @@ public class HomePage
    
    @FindBy(xpath="//a[text()='Products']")
    private WebElement productslink;
-   public WebElement getOrganizationslink() {
-	return organizationslink;
-   }
+   
    @FindBy(xpath = "//img[@src='themes/softed/images/user.PNG']")
    private WebElement adminimg;
    
    @FindBy(linkText = "Sign Out")
   private  WebElement signoutbtn;
+   
+   public WebElement getOrganizationslink() {
+	return organizationslink;
+   }
 
    public WebElement getAdminimg() {
 	return adminimg;
@@ -47,25 +49,15 @@ public class HomePage
 	return signoutbtn;
    }
 
-   public void setOrganizationslink(WebElement organizationslink) {
-	this.organizationslink = organizationslink;
-   }
-
    public WebElement getOpportunitieslink() {
 	return opportunitieslink;
    }
 
-   public void setOpportunitieslink(WebElement opportunitieslink) {
-	this.opportunitieslink = opportunitieslink;
-   }
 
    public WebElement getProductslink() {
 	return productslink;
    }
 
-   public void setProductslink(WebElement productslink) {
-	this.productslink = productslink;
-   }
 
    public WebElement getContactslink() {
 	return contactslink;
