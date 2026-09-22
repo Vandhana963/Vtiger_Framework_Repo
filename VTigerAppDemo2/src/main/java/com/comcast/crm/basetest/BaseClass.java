@@ -7,10 +7,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.testng.annotations.Parameters;
 
 import genericUtility.DatabaseUtility;
 import genericUtility.ExcelUtility;
@@ -39,12 +36,12 @@ public class BaseClass {
 
 	}
 
-	// @Parameters("BROWSER")
+	//@Parameters("BROWSER")
 	@BeforeClass(groups = { "SmokeTest", "RegressionTest" })
 	public void configBC() throws Exception {
 		System.out.println("====launch the browser====");
-		// String BROWSER=browser;
-		String browser = pu.readDataFromPropertyFile("Browser");
+		//String BROWSER=browser;
+		String browser =System.getProperty("browser", pu.readDataFromPropertyFile("Browser"));
 		driver = wu.launchBrowser(browser);
 		wu.maximizeBrowser(driver);
 		wu.implicitlyWaitMethod(driver);
