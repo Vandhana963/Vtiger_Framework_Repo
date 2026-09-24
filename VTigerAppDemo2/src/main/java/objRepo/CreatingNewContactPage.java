@@ -14,6 +14,7 @@ public class CreatingNewContactPage
 	WebDriver driver;
 	public CreatingNewContactPage(WebDriver driver)
 	{
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	

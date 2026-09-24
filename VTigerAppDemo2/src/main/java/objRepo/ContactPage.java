@@ -10,6 +10,7 @@ public class ContactPage
 	WebDriver driver;
 	public ContactPage(WebDriver driver)
 	{
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	

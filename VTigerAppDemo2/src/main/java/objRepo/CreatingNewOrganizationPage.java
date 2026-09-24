@@ -11,6 +11,7 @@ public class CreatingNewOrganizationPage
 	WebDriver driver;
 	public CreatingNewOrganizationPage(WebDriver driver)
 	{
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
